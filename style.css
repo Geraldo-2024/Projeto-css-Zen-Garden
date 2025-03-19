@@ -1,0 +1,17 @@
+
+/*Paleta de cores para projeto Zen garden*/
+/*
+.   {color: #F7B228; }
+.   {background: #EEFA70;}
+.   {color: #F7EB79;}
+.   {background: #F7E398;}
+.   {color: black, cor principal (fonte)}
+.   {color: #D99EC6 cor de destaque}
+*/
+
+
+html {
+    background: #F7E398;
+    color: black;
+
+}
