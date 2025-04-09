@@ -40,6 +40,47 @@ propriedade border-bottom e border-top respectivamente.
 Envie nessa atividade com o link do projeto no GitHub.
 */
 
+/*
+Exercícios - Pseudo classes
+
+1. Customize a aparência dos links da seguinte forma:
+Por padrão, devem ter a cor de destaque e estarem em negrito.
+Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. 
+Os links visitados não devem ficar mais em negrito.
+2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá customizá-lo para que:
+Tenha tamanho de fonte 3 vezes maior que o padrão.
+Seja de uma fonte diferente da escolhida para o site.
+Fique flutuando a esquerda.
+OBS: você precisará aplicar mais de um pseudo-seletor para realizar essa estilização. Fique atento!
+3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda
+ superior no topo de todos os itens de menu.
+Aplique uma borda inferior apenas no último item da lista
+*/
+
+a {
+    color: rgba(201, 33, 33, 0.753);
+}
+
+a:hover {
+    color:rgba(201, 33, 33, 0.337)
+}
+
+.main p:first-of-type::first-letter {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+
+.design-selection li {
+    border-top: #1f295c solid 1px;
+    padding-top: 5px;
+}
+
+.design-selection li:last-of-type {
+    border-bottom: #1f295c solid 1px;
+    padding: 5px;
+}
+
 .supporting footer {
     display: flex;
     justify-content: space-evenly;
@@ -114,7 +155,7 @@ aside ul li {
 
 .design-selection {
     position: absolute;
-    top: 520px;
+    top: 480px;
     left: 62%;
     padding-left: 1%; 
 }
