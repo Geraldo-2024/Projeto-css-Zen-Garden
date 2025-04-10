@@ -57,6 +57,10 @@ OBS: você precisará aplicar mais de um pseudo-seletor para realizar essa estil
 Aplique uma borda inferior apenas no último item da lista
 */
 
+
+
+
+
 a {
     color: rgba(201, 33, 33, 0.753);
 }
@@ -65,7 +69,7 @@ a:hover {
     color:rgba(201, 33, 33, 0.337)
 }
 
-.main p:first-of-type::first-letter {
+.main p:first-of-type:first-letter {
     font-size: 3em;
     font-family: 'Times New Roman', Times, serif;
     float: left;
@@ -151,13 +155,15 @@ aside ul li {
     width: 60%;
     border-right: #1f295c solid 1px;
     padding-right: 2%;
+    margin-right: 35%;
 }
 
 .design-selection {
     position: absolute;
     top: 480px;
     left: 62%;
-    padding-left: 1%; 
+    padding: 0 1%; 
+    width: 34%;
 }
 
 #zen-intro {
@@ -223,3 +229,67 @@ abbr {
     font-variant: small-caps;
 }
 
+/*
+Exercícios - Media query
+
+Vamos deixar a nossa página do CSS Zen Garden responsiva a dispositivos móveis! Para isso iremos implementar as seguintes modificações.
+1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos como layout mobile.
+2. Realize as seguintes mudanças para p layout mobile
+Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
+Remova a borda lateral ao lado da div
+mude a orientação do Flexbox presente no elemento   para vertical, e organize os elementos de forma empilhada
+Remova a altura fixa presente no cabeçalho da página
+Remova também o espaçamento inicial dado a cada um dos parágrafos
+Vamos Deixar nossa página mais adequada a mídia de impressão também!
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela
+2. Adicione as seguintes modificações a essa media query
+Altere o estilo da fonte para uma serifada, como times .
+Inverta as cores do banner para que o fundo fique claro (assim como o restante da página)
+
+Envie nessa atividade o arquivo zen_garden.zip
+*/
+
+@media screen and (max-width: 768px) {
+    .design-selection  {
+        position: static;
+        width: 100%;
+    }
+    
+    .explanation {
+        border-right: none;
+        width: 100%;
+    }
+
+    #zen-intro {
+        height: auto;
+    }
+
+    .participation {
+        flex-direction: column;
+    }
+
+    p {
+        text-indent: 0;
+    }
+}
+
+@media print {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #zen_intro header {
+        background-color: white;
+        color: black;
+    }
+
+    .design-selection {
+        position: static;
+        width: 100%;
+    }
+    
+    .explanation {
+        border-right: none;
+        width: 100%;
+    }
+    
+}
